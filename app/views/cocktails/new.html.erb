@@ -1,7 +1,18 @@
 <div class="container">
-<h1>Add a Cocktail!</h1>
-  <%= simple_form_for (@cocktail) do |f| %>
-    <%= f.input :name %>
-    <%= f.submit %>
+  <%= simple_form_for @cocktail, html: { class: 'form-horizontal' } do |f| %>
+  <div>
+    <div class="form-group col-xs-10">
+      <%= f.input :name, label: false, placeholder: "Add a cocktail"%>
+    </div>
+    <div class="form-group col-xs-2">
+      <%= f.submit "Add Cocktail", class: "btn-ghost" %>
+    </div>
+  </div>
   <% end %>
 </div>
+
+
+
+
+
+<!-- #apply form horizontal to simple_form -->

@@ -1,0 +1,11 @@
+<div class="container">
+  <%= simple_form_for @cocktail, html: { class: 'form-horizontal' } do |f| %>
+  <div>
+    <div class="center-form">
+      <div class="form-group col-sm-8">
+        <%= f.input :name, label: false, placeholder: "Add a cocktail and press enter!"%>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

@@ -1,8 +1,60 @@
-<h1>Yum.. Rum!</h1>
-<% @cocktails.each do |cocktail| %>
-  <%= link_to(cocktail_path(cocktail)) do %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-      <%= cocktail.name %>
+<body background=<%= 'https://images.unsplash.com/photo-1531002329786-97e3efcb754b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80' %>>
+<%= render 'form', cocktail: @cocktail %>
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <%= link_to(cocktail_path(cocktail)) do %>
+        <div class="col-xs-6">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(
+          <%= cocktail.image %>
+          )">
+            <%= cocktail.name.upcase %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+<!--   <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+    <div class="card-product-infos">
+      <div><h2>Product name</h2></div>
+      <div>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+        <p>Product description with <strong>relevant info</strong> only.</p>
+      </div>
     </div>
-  <% end %>
-<% end %>
+  </div>
+
+  <div class="row">
+    <%# @cocktails.each do |cocktail| %>
+      <%#= link_to(cocktail_path(cocktail)) do %>
+
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+          <div class="card-product-infos">
+            <div><h2><%#= cocktail.name %></h2></div>
+            <div>
+              <li><%#= cocktail.doses[0] %></li>
+
+            </div>
+          </div>
+        </div>
+ -->
+      <%# end %>
+    <%# end %>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+

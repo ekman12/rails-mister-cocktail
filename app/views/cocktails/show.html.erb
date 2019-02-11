@@ -1,5 +1,25 @@
-<h1><%= @cocktail.name %></h1>
-<% @cocktail.doses.each do |dose| %>
-<%= dose.description %> - <%= dose.ingredient.name %>
-<% end %>
+<body background=<%= @cocktail.image %>>
+  <div class="container">
+    <div class="lighter-background">
+      <h1><%= @cocktail.name.upcase %></h1>
+      <h2>INGREDIENTS</h2>
+      <% @cocktail.doses.each do |dose| %>
+      <p><%= dose.description %> - <%= dose.ingredient.name %></p>
+      <% end %>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <h2>ADD AN INGREDIENT</h2>
+            <%= simple_form_for [@cocktail, @dose] do |f| %>
+              <%= f.association :ingredient, placeholder: "Which ingredient do you need to add?" %>
+              <%= f.input :description %>
+              <%= f.button :submit, class: "btn-ghost" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
