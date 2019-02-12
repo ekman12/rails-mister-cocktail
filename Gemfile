@@ -71,6 +71,6 @@ gem 'carrierwave', '~> 1.2'
 gem 'dotenv-rails', groups: [:development, :test]
 
 # Gemfile
-gem 'mini_magick'
-gem 'fog-aws'
+# gem 'mini_magick'
+# gem 'fog-aws'
 
