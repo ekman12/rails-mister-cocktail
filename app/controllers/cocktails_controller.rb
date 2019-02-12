@@ -22,7 +22,6 @@ class CocktailsController < ApplicationController
   def show
     @cocktail = Cocktail.find(params[:id])
     @dose = Dose.new
-    raise
   end
 
  def new

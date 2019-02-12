@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Cocktail.destroy_all()
+Ingredient.destroy_all()
+
 Ingredient.create(name: 'lemon')
 Ingredient.create(name: 'ice')
 Ingredient.create(name: 'mint leaves')
@@ -18,10 +21,12 @@ Ingredient.create(name: 'bitters')
 Ingredient.create(name: 'whiskey')
 Ingredient.create(name: 'soda water')
 
-Cocktail.create(
-  name: 'screwdriver',
-  photo: 'https://images.unsplash.com/photo-1543363950-c78545037afc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80'
+screwdriver = Cocktail.new(
+  name: 'screwdriver'
 )
+screwdriver.remote_photo_url = 'https://images.unsplash.com/photo-1543363950-c78545037afc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80'
+screwdriver.save
+
 Cocktail.create(
   name: 'manhattan',
   photo: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60'
