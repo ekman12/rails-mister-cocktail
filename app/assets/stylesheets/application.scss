@@ -46,3 +46,10 @@ body {
   }
 }
 
+i{
+  color: white;
+  &:hover{
+    color: grey;
+  }
+}
+
