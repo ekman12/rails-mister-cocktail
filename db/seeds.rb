@@ -51,7 +51,7 @@ COCKTAILS = [
   'mojito'
 ]
 
-images.each_with_index do |photo, index|
+IMAGES.each_with_index do |photo, index|
   cocktail = Cocktail.new(
     name: COCKTAILS[index]
   )
