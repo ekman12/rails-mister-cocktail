@@ -1,0 +1,28 @@
+.bottom-form{
+  margin: 20px 0;
+  text-align: center;
+  height: 320px;
+  padding: 20px 80px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+  color: black;
+  h1, h2, p {
+    color: black;
+  }
+  h1{
+    margin-top: 10px;
+    font-size: 56px;
+    letter-spacing: 8px;
+  }
+  h2{
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+  input{
+    border-radius: 6px;
+  }
+}
+
+.photo-upload {
+  text-align: center;
+}
